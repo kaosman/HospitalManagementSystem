@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+  <head>
+    <title> Justinmind - Error</title>
+    <link rel="shortcut icon" href="_jim/images/function-jim-all/favicon.ico" />
+    <style type="text/css">
+      body {
+        background-color: #ffffff;
+      }
+      #overlay {
+        position: relative;
+        top: 200px;
+        width: 100%;
+      }
+      #message {
+        border: 1px solid #dddddd;
+        width: 670px;
+        padding: 15px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #title {
+        color: #2e2e2e;
+        font-size: 26px;
+        font-weight: normal;
+        margin-bottom: 4px;
+      }
+      #error {
+        color: #636363;
+        font-size: 20px;
+        line-height: 23px;
+      }
+      #error li {
+        margin: 8px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="overlay">
+      <div id="message">
+        <h2 id="title">Google Chrome Advise</h2>
+        <div id="error">
+          Due to security restrictions Google Chrome limits the access to local files.
+          <ul>
+            <li>you may restart Google Chrome with:<br />"PATH_TO_CHROME\chrome.exe" <b>--allow-file-access-from-files</b></li>
+            <li>or, export the prototype to HTML without comments</li>
+          </ul>
+        </div>
+      </div>          
+    </div>
+  </body>
+</html>

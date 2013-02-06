@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>My_HMS_2</display-name>
+  <welcome-file-list>
+    <!-- <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file> -->
+    <welcome-file>/loginPage.html</welcome-file>
+  </welcome-file-list>
+
+	<!-- LOGIN-LOGOUT -->
+	
+	<servlet>
+		<display-name>ControllerServlet</display-name>
+		<servlet-name>ControllerServlet</servlet-name>
+		<servlet-class>impl.Controller</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ControllerServlet</servlet-name>
+		<url-pattern>/loginPage</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ControllerServlet</servlet-name>
+		<url-pattern>/loginFailed</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>Logout</display-name>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>impl.Logout</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+	
+	<!-- DOCTOR -->
+	
+	<servlet>
+		<display-name>DoctorPatientSearch</display-name>
+		<servlet-name>DoctorPatientSearch</servlet-name>
+		<servlet-class>impl.DoctorPatientSearch</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DoctorPatientSearch</servlet-name>
+		<url-pattern>/DoctorPatientSearch</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>DoctorPatientSearch_CreateReport</display-name>
+		<servlet-name>DoctorPatientSearch_CreateReport</servlet-name>
+		<servlet-class>impl.DoctorPatientSearch_CreateReport</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DoctorPatientSearch_CreateReport</servlet-name>
+		<url-pattern>/DoctorPatientSearch_CreateReport</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>SearchEditReport</display-name>
+		<servlet-name>SearchEditReport</servlet-name>
+		<servlet-class>impl.SearchEditReport</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchEditReport</servlet-name>
+		<url-pattern>/SearchEditReport</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>EditMedicalReport</display-name>
+		<servlet-name>EditMedicalReport</servlet-name>
+		<servlet-class>impl.EditMedicalReport</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditMedicalReport</servlet-name>
+		<url-pattern>/EditMedicalReport</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>CreateMedicalReport</display-name>
+		<servlet-name>CreateMedicalReport</servlet-name>
+		<servlet-class>impl.CreateMedicalReport</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateMedicalReport</servlet-name>
+		<url-pattern>/CreateMedicalReport</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>ViewPatientAppointment</display-name>
+		<servlet-name>ViewPatientAppointment</servlet-name>
+		<servlet-class>impl.ViewPatientAppointment</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewPatientAppointment</servlet-name>
+		<url-pattern>/ViewPatientAppointment</url-pattern>
+	</servlet-mapping>
+	
+	<!-- NURSE -->
+	
+	<servlet>
+		<display-name>NewPatientRegistration</display-name>
+		<servlet-name>NewPatientRegistration</servlet-name>
+		<servlet-class>impl.NewPatientRegistration</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewPatientRegistration</servlet-name>
+		<url-pattern>/NewPatientRegistration</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>patientCheckIn</display-name>
+		<servlet-name>patientCheckIn</servlet-name>
+		<servlet-class>impl.PatientCheckIn</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>patientCheckIn</servlet-name>
+		<url-pattern>/patientCheckIn</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>SearchPatient</display-name>
+		<servlet-name>SearchPatient</servlet-name>
+		<servlet-class>impl.ViewPatientRecord</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchPatient</servlet-name>
+		<url-pattern>/SearchPatient</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>SearchPatientCheckin</display-name>
+		<servlet-name>SearchPatientCheckin</servlet-name>
+		<servlet-class>impl.PatientCheckIn</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchPatientCheckin</servlet-name>
+		<url-pattern>/SearchPatientCheckin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>AdmitPatient</display-name>
+		<servlet-name>AdmitPatient</servlet-name>
+		<servlet-class>impl.AdmitPatient</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdmitPatient</servlet-name>
+		<url-pattern>/AdmitPatient</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>GetBedsForRoom</display-name>
+		<servlet-name>GetBedsForRoom</servlet-name>
+		<servlet-class>impl.GetBedsForRoom</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>GetBedsForRoom</servlet-name>
+		<url-pattern>/GetBedsForRoom</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<display-name>EditPatientPersonalRecord</display-name>
+		<servlet-name>EditPatientPersonalRecord</servlet-name>
+		<servlet-class>impl.EditPatientPersonalRecord</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditPatientPersonalRecord</servlet-name>
+		<url-pattern>/EditPatientPersonalRecord</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>SearchPatientAdmitted</display-name>
+		<servlet-name>SearchPatientAdmitted</servlet-name>
+		<servlet-class>impl.ViewAdmittedPatient</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchPatientAdmitted</servlet-name>
+		<url-pattern>/SearchPatientAdmitted</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>Select_Appointment</display-name>
+		<servlet-name>Select_Appointment</servlet-name>
+		<servlet-class>impl.SelectAppointmentData</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Select_Appointment</servlet-name>
+		<url-pattern>/Select_Appointment</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>BookAppointment</display-name>
+		<servlet-name>BookAppointment</servlet-name>
+		<servlet-class>impl.SelectAppointment</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BookAppointment</servlet-name>
+		<url-pattern>/BookAppointment</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>FinalizeAppointment</display-name>
+		<servlet-name>FinalizeAppointment</servlet-name>
+		<servlet-class>impl.BookAppointment</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FinalizeAppointment</servlet-name>
+		<url-pattern>/FinalizeAppointment</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>Select_Cancel_Appointment</display-name>
+		<servlet-name>Select_Cancel_Appointment</servlet-name>
+		<servlet-class>impl.CancelAppointmentData</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Select_Cancel_Appointment</servlet-name>
+		<url-pattern>/Select_Cancel_Appointment</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>CancelAppointmentConfirmation</display-name>
+		<servlet-name>CancelAppointmentConfirmation</servlet-name>
+		<servlet-class>impl.CancelAppointmentConfirmation</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CancelAppointmentConfirmation</servlet-name>
+		<url-pattern>/CancelAppointmentConfirmation</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>CancelAppointment</display-name>
+		<servlet-name>CancelAppointment</servlet-name>
+		<servlet-class>impl.CancelAppointment</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CancelAppointment</servlet-name>
+		<url-pattern>/CancelAppointment</url-pattern>
+	</servlet-mapping>
+	
+  	<!-- Cancel appointment -->
+  	<!-- LAWYER -->
+  	
+  	<servlet>
+		<display-name>viewAuditTrail</display-name>
+		<servlet-name>viewAuditTrail</servlet-name>
+		<servlet-class>impl.ViewAuditTrail</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>viewAuditTrail</servlet-name>
+		<url-pattern>/ViewAuditTrail</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<display-name>selectAuditTrail</display-name>
+		<servlet-name>selectAuditTrail</servlet-name>
+		<servlet-class>impl.SelectAuditTrail</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selectAuditTrail</servlet-name>
+		<url-pattern>/ViewAuditTrailDates</url-pattern>
+	</servlet-mapping>
+	
+	<!-- IT ADMIN -->
+	
+	<servlet>
+		<display-name>AddEmployee</display-name>
+		<servlet-name>AddEmployee</servlet-name>
+		<servlet-class>impl.AddEmployee</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddEmployee</servlet-name>
+		<url-pattern>/AddEmployee</url-pattern>
+	</servlet-mapping>
+  	
+</web-app>
